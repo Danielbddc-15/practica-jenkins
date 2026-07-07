@@ -5,6 +5,9 @@ pipeline {
         nodejs "Node18" // Configura una instalación de Node.js en Jenkins
         dockerTool "Dockertool"  // Cambia el nombre de la herramienta según tu configuración en Jenkins
     }
+    environment {
+        DOCKER_API_VERSION = '1.40' // Establece la versión de la API de Docker
+    }
 
     stages {
         stage('Construir Imagen Docker') {
